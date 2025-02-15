@@ -1,0 +1,214 @@
+body{
+    background-color: rgb(4, 11, 49);
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 180px;
+}
+.navbar{
+    z-index: 1000;
+    background-color: rgba(4, 11, 49);  
+    box-shadow: 0px 0.2px 0.4px rgb(198, 216, 216, 0.985);
+    height: 100px;
+    
+}
+#collapse-navbar{
+    background-color: rgba(4, 11, 49);
+    text-align: center;
+}
+
+.logo{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.navbar-toggler{
+    background-color: #f5faff;
+    border: 1px solid white
+}
+
+.navbar .nav-link{
+    color: white !important;
+   
+    font-size: larger;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;  
+}
+
+.navbar .nav-link:hover{
+    color: #a7aeb3 !important;
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+/* Home CSS */
+html{
+    scroll-behavior: smooth;
+}
+#container{
+    color: white;
+}
+.change1::after{
+    content: " Hasindi! ";
+    text-shadow: 0 0 4px rgb(141, 226, 247),
+                 0 0 5px rgb(86, 143, 229);
+    color: #d4f1fc;
+    /* background: linear-gradient(to right, rgb(184, 217, 247), rgb(175, 215, 229));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    font-size: 50px;
+}
+
+#typed-output{
+    font-size: 30px;
+    color: #81b7dd;
+}
+#para{
+    color: rgb(228, 222, 222);
+}
+.socials a{
+    text-decoration: none;
+}
+.socialimg{
+    height: 40px;
+}
+
+.socials{
+    display: flex;
+    gap: 20px;
+
+}
+.socials a:hover{
+    transform: scale(1.2);
+}
+
+hr{
+    color: rgb(112, 121, 153);
+    width: 85%;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    margin: auto;
+}
+/* for profile image */
+@media(max-width: 767px){
+    .proImg{
+        margin-top: -80px !important;
+        height: 500px !important;
+    }
+}
+
+/* About CSS */
+#about{
+    color: #81b7dd;
+    scroll-margin-top: 100px;
+    margin-top: 8px;
+    font-size: 4rem;
+}
+#about-para{
+    color: rgb(228, 222, 222);
+    margin-top: 20px;
+}
+
+#about-images img{
+    height: 20px;
+}
+.contact-info{
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgb(228, 222, 222);
+}
+#about-images{
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Skills CSS */
+#skills{
+    color: #81b7dd;
+    scroll-margin-top: 100px;
+    margin-top: 8px;
+    font-size: 4rem;
+}
+.skills-heading{
+    color: rgb(228, 222, 222);
+    font-size: 1.3rem;
+}
+
+/* Projects CSS */
+#projects{
+    color: #81b7dd;
+    scroll-margin-top: 100px;
+    margin-top: 8px;
+    font-size: 4rem;
+}
+.box{
+    position: relative;
+    overflow: hidden;
+    /* border: 3px solid   rgb(42, 66, 108); */
+    border: 3px solid   rgb(4, 11, 49);
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px rgba(54, 56, 63, 0.8);
+    transition: transform 0.3s ease-in-out;
+}
+.project-image{
+    height: auto;
+    display: block;
+    width: 100%;
+}
+.box:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px rgba(198, 216, 216, 0.985);
+}
+#visit{
+    color: white;
+}
+
+/* Contact CSS */
+#contact{
+    scroll-margin-top: 100px;
+    margin-top: 8px;
+    font-size: 4rem;
+    color:  #81b7dd;
+}
+#contact-section{
+    padding: 50px 0;
+    background-color: #a7aeb3;
+}
+.card{
+    background-color: rgb(4, 11, 49);
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    border-color: rgb(10, 18, 76);
+    box-shadow: 0px 0px 2px rgba(198, 216, 216, 0.985);
+}
+.form-control{
+    background-color: #9a9db7;
+    border: none;
+}
+.btn{
+    background: linear-gradient(90deg, #4233ea, #38bdf8);
+    border: none;
+    color: white;
+    margin-top: 10px;
+}
+footer{
+    color: white;
+    text-align: center;
+}
+.footer-hr{
+    width: 100%;
+    border: 2px solid rgb(112, 121, 153);
+    margin-top: 350px;
+}
