@@ -16,7 +16,7 @@ Welcome to my personal portfolio website! This website showcases my projects, sk
 - **Other Tools**: Git, GitHub, VS Code, Figma, etc.
 
 ## Access the portfolio website via: 
-   starlit-crostata-e1534e.netlify.app  
+   https://hasindithiranya.netlify.app/
 
 ## Installation
 
