@@ -2,6 +2,9 @@
 
 Welcome to my personal portfolio website! This website showcases my projects, skills, and experiences in web development and other technical areas. Feel free to explore my work and get in touch if you'd like to collaborate or learn more about me.
 
+## Access the portfolio website via: 
+   https://hasindithiranya.netlify.app/
+
 ## Features
 
 - **Project Showcases**: Explore the various projects I've worked on with detailed descriptions and links to the live versions or repositories.
@@ -14,9 +17,6 @@ Welcome to my personal portfolio website! This website showcases my projects, sk
 - **CSS**: For styling and responsiveness.
 - **JavaScript**: For any interactive elements.
 - **Other Tools**: Git, GitHub, VS Code, Figma, etc.
-
-## Access the portfolio website via: 
-   https://hasindithiranya.netlify.app/
 
 ## Installation
 
