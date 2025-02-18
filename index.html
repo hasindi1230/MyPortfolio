@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hasindi Thiranya</title>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
+    <title>Hasindi Thiranya</title>
 </head>
 <body>
     <header>
@@ -331,8 +333,11 @@
                 <div class="col-md-5 hidden">
                     <div class="card p-4" style="">
                         <h5 class="text-center fw-bold mb-3 hidden" style="color: whitesmoke;">Get in Touch</h5>
+
+
+                        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
         
-                        <form class="hidden">
+                        <form class="hidden" id="contact-form">
                             <div class="mb-3">
                                 <label for="name" class="form-label fs-5" style="color: rgb(228, 222, 222);">Name</label>
                                 <input type="text" class="form-control form-control-sm" id="name" placeholder="Enter Your Name" required>
@@ -348,13 +353,42 @@
                                 <textarea class="form-control form-control-sm" name="message" id="message" rows="3" placeholder="Enter Your Message" class="fs-5"></textarea>
                             </div>
         
-                            <div class="d-grid justify-content-center">
-                                <a href="mailto:hasindihikkaduwa@gmail.com?subject=Message from Portfolio&body=Hello,">
-                                    <button type="submit" class="btn" >Send Message</button>
-                                </a>
-                    
+                            <div class="d-grid justify-content-center">  
+                                <button type="button" class="btn" onclick="sendEmail(event)" >Send Message</button>                 
                             </div>
                         </form>
+
+                        <script>
+
+                            (function(){
+                                emailjs.init("KzqK5MS4jz9uoIgTU")
+                            }) ();
+
+                            function sendEmail(event){
+
+                                event.preventDefault();
+
+                                let name = document.getElementById("name").value;
+                                let email = document.getElementById("email").value;
+                                let message = document.getElementById("message").value;
+
+                                emailjs.send("service_hgyfypj", "template_zgy8wcl" , {
+                                    from_name: name,
+                                    from_email: email,
+                                    from_message: message
+                                })
+                                .then(response => {
+                                    alert("Message sent successfully");
+                                    document.getElementById("contact-form").reset();
+                                })
+                                .catch (error =>{
+                                    alert("Failed to send message");
+                                    console.error("Emailjs error: " , error)
+                                });
+                            }
+                                
+                        </script>
+        
         
                     </div>
         
@@ -402,5 +436,6 @@
         hiddenElements.forEach(el => observer.observe(el));
     });
     </script>
+
 </body>
 </html>
