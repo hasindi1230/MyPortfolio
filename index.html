@@ -530,9 +530,12 @@
 
     <script>
         document.querySelectorAll('.box').forEach(box => {
-            box.addEventListener('click', () => {
-                const overlay = box.querySelector('.overlay');
+            box.addEventListener('click', function(e) {
+            // Prevent clicking on links inside the overlay from toggling it
+            if (!e.target.closest('a')) {
+                const overlay = this.querySelector('.overlay');
                 overlay.style.opacity = overlay.style.opacity === '1' ? '0' : '1';
+            }
             });
         });
     </script>
