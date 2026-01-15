@@ -7,7 +7,7 @@ body{
     z-index: 1000;
     background-color: rgba(4, 11, 49);  
     box-shadow: 0px 0.2px 0.4px rgb(198, 216, 216, 0.985);
-    height: 100px;
+    height: 120px;
     
 }
 #collapse-navbar{
@@ -147,7 +147,7 @@ hr{
 }
 
 /* Projects CSS */
-#projects{
+/* /#projects{
     color: #81b7dd;
     scroll-margin-top: 100px;
     margin-top: 8px;
@@ -157,15 +157,16 @@ hr{
     position: relative;
     overflow: hidden;
     /* border: 3px solid   rgb(42, 66, 108); */
-    border: 3px solid   rgb(4, 11, 49);
+    /* border: 3px solid   rgb(4, 11, 49);
     border-radius: 10px;
     box-shadow: 0px 5px 5px rgba(54, 56, 63, 0.8);
     transition: transform 0.3s ease-in-out;
 }
 .project-image{
-    height: auto;
     display: block;
     width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
 .box:hover{
     transform: scale(1.1);
@@ -173,7 +174,89 @@ hr{
 }
 #visit{
     color: white;
+} */ 
+
+/* Projects CSS */
+
+#projects{
+    color: #81b7dd;
+    scroll-margin-top: 100px;
+    margin-top: 8px;
+    font-size: 4rem;
 }
+
+/* Box styling */
+.box {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid   rgb(42, 66, 108);
+    border: 3px solid   rgb(4, 11, 49);
+    border-radius: 10px;
+    padding-bottom: 20px;
+    box-shadow: 0px 5px 5px rgba(54, 56, 63, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Scale effect on hover */
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(198, 216, 216, 0.85);
+}
+
+/* Overlay hidden by default */
+.overlay {
+    background-color: rgba(4, 11, 49, 0.85); /* semi-transparent overlay */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show overlay on hover (desktop) */
+@media (hover: hover) {
+    .box:hover .overlay {
+        opacity: 1;
+    }
+}
+
+/* Project image uniform size */
+.project-image {
+    width: 100%;
+    aspect-ratio: 16/15;   /* keeps height proportional automatically */
+    object-fit: cover;
+    display: block;
+}
+
+/* Title styling, always visible below image */
+.title {
+    background-color: rgb(4, 11, 49); /* inside the box */
+}
+
+/* Optional: responsive font sizes */
+@media (max-width: 480px) {
+    .title h4 {
+        font-size: 1rem;
+    }
+
+    .overlay p {
+        font-size: 0.875rem;
+    }
+}
+
+#visit{
+    color: white;
+}
+
+.row{
+    overflow: hidden;
+}
+
+
+/* On touch devices, show overlay always */
+@media (hover: none) {
+    .overlay {
+        opacity: 1 !important;
+    }
+}
+
 
 /* Contact CSS */
 #contact{
